@@ -1,0 +1,7 @@
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Entities\obj\Debug\netstandard2.0\TahaBloggerProject.Entities.AssemblyInfoInputs.cache
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Entities\obj\Debug\netstandard2.0\TahaBloggerProject.Entities.AssemblyInfo.cs
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Entities\bin\Debug\netstandard2.0\TahaBloggerProject.Entities.deps.json
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Entities\bin\Debug\netstandard2.0\TahaBloggerProject.Entities.dll
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Entities\bin\Debug\netstandard2.0\TahaBloggerProject.Entities.pdb
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Entities\obj\Debug\netstandard2.0\TahaBloggerProject.Entities.dll
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Entities\obj\Debug\netstandard2.0\TahaBloggerProject.Entities.pdb

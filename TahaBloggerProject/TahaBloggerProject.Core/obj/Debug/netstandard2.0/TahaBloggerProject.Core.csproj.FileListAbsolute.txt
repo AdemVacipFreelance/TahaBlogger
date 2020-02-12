@@ -1,0 +1,8 @@
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Core\bin\Debug\netstandard2.0\TahaBloggerProject.Core.deps.json
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Core\bin\Debug\netstandard2.0\TahaBloggerProject.Core.dll
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Core\bin\Debug\netstandard2.0\TahaBloggerProject.Core.pdb
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Core\obj\Debug\netstandard2.0\TahaBloggerProject.Core.AssemblyInfoInputs.cache
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Core\obj\Debug\netstandard2.0\TahaBloggerProject.Core.AssemblyInfo.cs
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Core\obj\Debug\netstandard2.0\TahaBloggerProject.Core.dll
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Core\obj\Debug\netstandard2.0\TahaBloggerProject.Core.pdb
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Core\obj\Debug\netstandard2.0\TahaBloggerProject.Core.csprojAssemblyReference.cache
