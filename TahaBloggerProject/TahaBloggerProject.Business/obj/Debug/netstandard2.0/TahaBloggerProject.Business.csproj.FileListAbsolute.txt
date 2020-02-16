@@ -11,3 +11,5 @@ C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Business\bin\Debug\ne
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Business\bin\Debug\netstandard2.0\TahaBloggerProject.Entities.pdb
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Business\obj\Debug\netstandard2.0\TahaBloggerProject.Business.csprojAssemblyReference.cache
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Business\obj\Debug\netstandard2.0\TahaBloggerProject.Business.csproj.CopyComplete
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Business\bin\Debug\netstandard2.0\TahaBloggerProject.Core.dll
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.Business\bin\Debug\netstandard2.0\TahaBloggerProject.Core.pdb

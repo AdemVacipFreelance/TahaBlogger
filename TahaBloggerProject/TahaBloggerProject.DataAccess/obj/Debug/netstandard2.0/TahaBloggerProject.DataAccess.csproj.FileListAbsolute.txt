@@ -9,3 +9,5 @@ C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.DataAccess\bin\Debug\
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.DataAccess\obj\Debug\netstandard2.0\TahaBloggerProject.DataAccess.csproj.CopyComplete
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.DataAccess\obj\Debug\netstandard2.0\TahaBloggerProject.DataAccess.dll
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.DataAccess\obj\Debug\netstandard2.0\TahaBloggerProject.DataAccess.pdb
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.DataAccess\bin\Debug\netstandard2.0\TahaBloggerProject.Core.dll
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.DataAccess\bin\Debug\netstandard2.0\TahaBloggerProject.Core.pdb

@@ -1374,11 +1374,25 @@
           "bin/placeholder/TahaBloggerProject.Business.dll": {}
         }
       },
+      "TahaBloggerProject.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.1"
+        },
+        "compile": {
+          "bin/placeholder/TahaBloggerProject.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TahaBloggerProject.Core.dll": {}
+        }
+      },
       "TahaBloggerProject.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.1",
+          "TahaBloggerProject.Core": "1.0.0",
           "TahaBloggerProject.Entities": "1.0.0"
         },
         "compile": {
@@ -1392,7 +1406,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "System.ComponentModel.Annotations": "4.7.0"
+          "System.ComponentModel.Annotations": "4.7.0",
+          "TahaBloggerProject.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TahaBloggerProject.Entities.dll": {}
@@ -5231,6 +5246,11 @@
       "type": "project",
       "path": "../TahaBloggerProject.Business/TahaBloggerProject.Business.csproj",
       "msbuildProject": "../TahaBloggerProject.Business/TahaBloggerProject.Business.csproj"
+    },
+    "TahaBloggerProject.Core/1.0.0": {
+      "type": "project",
+      "path": "../TahaBloggerProject.Core/TahaBloggerProject.Core.csproj",
+      "msbuildProject": "../TahaBloggerProject.Core/TahaBloggerProject.Core.csproj"
     },
     "TahaBloggerProject.DataAccess/1.0.0": {
       "type": "project",

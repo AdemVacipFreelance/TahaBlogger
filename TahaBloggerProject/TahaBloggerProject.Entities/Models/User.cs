@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TahaBloggerProject.Core.Entities;
 
 namespace TahaBloggerProject.Entities.Models
 {
-   public  class User
+   public  class User:IEntity
     {
         public int UserId { get; set; }
         public string Name  { get; set; }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TahaBloggerProject.Entities.Models
+namespace TahaBloggerProject.Core.Entities
 {
-   public class PostImages
+   public interface IEntity
     {
     }
 }

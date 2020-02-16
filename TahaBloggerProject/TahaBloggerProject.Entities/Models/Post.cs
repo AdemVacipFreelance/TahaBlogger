@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TahaBloggerProject.Core.Entities;
 
 namespace TahaBloggerProject.Entities.Models
 {
-   public class Post
+   public class Post:IEntity
     {
         public int PostId { get; set; }
         public string Title { get; set; }
@@ -16,6 +17,6 @@ namespace TahaBloggerProject.Entities.Models
         public virtual User User { get; set; }
         public virtual Category Category { get; set; }
         public virtual List<Like> Likes { get; set; }
-        public virtual List<PostImages> Images { get; set; }
+       
     }
 }
