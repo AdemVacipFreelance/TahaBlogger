@@ -74,16 +74,27 @@ namespace TahaBloggerProject.WebAPI
             services.AddTransient<ICategoryService, CategoryManager>();
             services.AddTransient<ICategoryDal, CategoryDal>();
 
-            // diğerlerinide ekle ekledim.
-            services.AddTransient<IUserService, UserManager>();
-            services.AddTransient<IUserDal, UserDal>();
+            services.AddTransient<ICommentService, CommentManager>();
+            services.AddTransient<ICommentDal, CommentDal>();
+
+            services.AddTransient<ILikeService, LikeManager>();
+            services.AddTransient<ILikeDal, LikeDal>();
 
             services.AddTransient<IPostService, PostManager>();
             services.AddTransient<IPostDal, PostDal>();
 
+            services.AddTransient<IPostImageService, PostImageManager>();
+            services.AddTransient<IPostImageDal, PostImageDal>();
 
-           
-          
+            services.AddTransient<IRoleService, RoleManager>();
+            services.AddTransient<IRoleDal, RoleDal>();
+
+            services.AddTransient<IUserService, UserManager>();
+            services.AddTransient<IUserDal, UserDal>();
+
+            services.AddTransient<IUserRoleService, UserRoleManager>();
+            services.AddTransient<IUserRoleDal, UserRoleDal>();
+
 
 
             services.AddDbContext<TahaBlogDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:TahaBlogDb"]));

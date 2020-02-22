@@ -61,3 +61,5 @@ C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.WebAPI\bin\Debug\netc
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.WebAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.WebAPI\obj\Debug\netcoreapp3.1\TahaBloggerProject.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.WebAPI\obj\Debug\netcoreapp3.1\TahaBloggerProject.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.WebAPI\bin\Debug\netcoreapp3.1\TahaBloggerProject.Core.dll
+C:\Project\TahasBlog\TahaBloggerProject\TahaBloggerProject.WebAPI\bin\Debug\netcoreapp3.1\TahaBloggerProject.Core.pdb

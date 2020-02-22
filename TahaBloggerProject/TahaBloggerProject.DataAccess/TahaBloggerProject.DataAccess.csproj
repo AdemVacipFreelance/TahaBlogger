@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TahaBloggerProject.Core\TahaBloggerProject.Core.csproj" />
     <ProjectReference Include="..\TahaBloggerProject.Entities\TahaBloggerProject.Entities.csproj" />
   </ItemGroup>
 
