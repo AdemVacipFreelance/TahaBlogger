@@ -7,7 +7,7 @@ namespace TahaBloggerProject.Business.Helper.CommonOperation
 {
   public  static class ValidationHelper
     {
-        public const string EmailRegex = @"^\w+([-+.']\w+)@\w+([-.]\w+)\.\w+([-.]\w+)*$";
+        private const string EmailRegex = @"^\w+([-+.']\w+)@\w+([-.]\w+)\.\w+([-.]\w+)*$";
 
         public static bool IsEmail(string value)
         {

@@ -16,7 +16,7 @@ namespace TahaBloggerProject.Business.Helper.MailOperation.Gmail
         {
             _emailSettings = emailSettings.Value;
         }
-        
+
 
         public Task SendEmailAsync(string email, string subject, string message)
         {
@@ -32,7 +32,7 @@ namespace TahaBloggerProject.Business.Helper.MailOperation.Gmail
                                  : email;
                 MailMessage mail = new MailMessage()
                 {
-                    From = new MailAddress("ademolguner@gmail.com", "Muhammad Hassan Tariq")
+                    From = new MailAddress("ademolguner@gmail.com", "Muhammad Hassan Tariq") // String veri olmasın bir nesneden alınmalı
                 };
                 mail.To.Add(new MailAddress(toEmail));
                 mail.CC.Add(new MailAddress("ademolguner@gmail.com"));
@@ -41,20 +41,24 @@ namespace TahaBloggerProject.Business.Helper.MailOperation.Gmail
                 mail.Body = message;
                 mail.IsBodyHtml = true;
                 mail.Priority = MailPriority.High;
-
-                using (SmtpClient smtp = new SmtpClient(_emailSettings.PrimaryDomain, _emailSettings.SecondaryPort))
-                {
-                    smtp.Credentials = new NetworkCredential(_emailSettings.UsernameEmail, _emailSettings.UsernamePassword);
-                    smtp.EnableSsl = true;
-                    await smtp.SendMailAsync(mail);
-                }
+                var smtp = GetSmtpSettings();
+                await smtp.SendMailAsync(mail);
+                // falan filan bu sekilde ne kadar tekrar edebilecek işlem var ise metot parcalarına ayır kullan.
             }
             catch (Exception ex)
             {
                 //do something here
             }
         }
-         
+
+        public SmtpClient GetSmtpSettings()
+        {
+            SmtpClient smtp = new SmtpClient(_emailSettings.PrimaryDomain, _emailSettings.SecondaryPort);
+            smtp.Credentials = new NetworkCredential(_emailSettings.UsernameEmail, _emailSettings.UsernamePassword);
+            smtp.EnableSsl = true;
+            return smtp;
+
+        }
     }
 }
 
