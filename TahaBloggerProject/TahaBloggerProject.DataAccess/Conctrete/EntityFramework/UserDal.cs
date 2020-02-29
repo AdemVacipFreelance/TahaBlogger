@@ -9,7 +9,7 @@ using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.DataAccess.Conctrete.EntityFramework
 {
-    public interface UserDal : EntityRepositoryBase<UserRole, TahaBlogDbContext>, IUserDal
+    public class UserDal : EntityRepositoryBase<User, TahaBlogDbContext>, IUserDal
     {
       
 

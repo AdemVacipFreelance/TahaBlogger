@@ -17,8 +17,8 @@ namespace TahaBloggerProject.Entities.Models
 
 
 
-        public virtual User User { get; set; }
-        public virtual Category Category { get; set; }
+     
+       
        
        
     }

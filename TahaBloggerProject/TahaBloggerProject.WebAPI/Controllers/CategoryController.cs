@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TahaBloggerProject.Business.Abstract;
+using TahaBloggerProject.Entities.DTOS;
 using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.WebAPI.Controllers
@@ -38,7 +39,7 @@ namespace TahaBloggerProject.WebAPI.Controllers
         }
 
         [HttpPost("AddNewCategory")]
-        public void AddNewCategory(Category category)
+        public void AddNewCategory(CategoryDto category)
         {
             _categoryService.Insert(category);
         }

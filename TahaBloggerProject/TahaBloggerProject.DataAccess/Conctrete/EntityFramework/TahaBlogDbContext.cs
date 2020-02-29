@@ -23,15 +23,15 @@ namespace TahaBloggerProject.DataAccess.Conctrete.EntityFramework
             optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=TahasBlogDb;Integrated Security=True;");
         }
 
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Comment> Comments { get; set; }
-        public DbSet<Like> Likes { get; set; }
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Comment> Comment { get; set; }
+        public DbSet<Like> Like { get; set; }
+        public DbSet<Post> Post { get; set; }
   
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<Role> Role { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<UserRole> UserRole { get; set; }
 
-        public DbSet<PostImage> PostImages { get; set; }
+        public DbSet<PostImage> PostImage { get; set; }
     }
 }

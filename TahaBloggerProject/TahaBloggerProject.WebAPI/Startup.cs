@@ -16,8 +16,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.Business.Concrete;
+using TahaBloggerProject.Business.Helper.MailOperation;
+using TahaBloggerProject.Business.Helper.MailOperation.Gmail;
 using TahaBloggerProject.DataAccess.Abstract;
 using TahaBloggerProject.DataAccess.Conctrete.EntityFramework;
+using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.WebAPI
 {
@@ -27,6 +30,7 @@ namespace TahaBloggerProject.WebAPI
         {
             Configuration = configuration;
         }
+       
 
         public IConfiguration Configuration { get; }
 
@@ -67,7 +71,7 @@ namespace TahaBloggerProject.WebAPI
                 //System.IO.FileNotFoundException: 'Could not find filec.IncludeXmlComments(xmlPath);
             });
 
-
+            services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
 
 
 
@@ -94,6 +98,8 @@ namespace TahaBloggerProject.WebAPI
 
             services.AddTransient<IUserRoleService, UserRoleManager>();
             services.AddTransient<IUserRoleDal, UserRoleDal>();
+
+            services.AddTransient<IMailOperation, GMailOperation>();
 
 
 
@@ -124,11 +130,12 @@ namespace TahaBloggerProject.WebAPI
             });
 
             app.UseAuthorization();
-
+         
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

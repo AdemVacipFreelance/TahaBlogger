@@ -16,10 +16,10 @@ namespace TahaBloggerProject.DataAccess.Conctrete.EntityFramework
         {
             using (var dbContext =new TahaBlogDbContext())
             {
-                var data = from ur in dbContext.UserRoles
-                        join us in dbContext.Users
+                var data = from ur in dbContext.UserRole
+                        join us in dbContext.User
                         on ur.UserId equals us.UserId
-                        join r in dbContext.Roles
+                        join r in dbContext.Role
                         on ur.RoleId equals r.RoleId
                         where ur.UserId == userId
 

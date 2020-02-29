@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TahaBloggerProject.Entities.DTOS;
 using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.Business.Abstract
@@ -9,6 +10,7 @@ namespace TahaBloggerProject.Business.Abstract
     {
         List<Category> GetAllCategories();
         Category GetCategoryById(int categoryId);
-        Category Insert(Category category);
+        Category Insert(CategoryDto category);
+
     }
 }

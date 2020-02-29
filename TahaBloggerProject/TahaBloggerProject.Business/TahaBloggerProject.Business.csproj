@@ -5,8 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TahaBloggerProject.DataAccess\TahaBloggerProject.DataAccess.csproj" />
     <ProjectReference Include="..\TahaBloggerProject.Entities\TahaBloggerProject.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helper\MailOperation\Ericsson\" />
+    <Folder Include="Helper\MailOperation\Outlook\" />
   </ItemGroup>
 
 </Project>

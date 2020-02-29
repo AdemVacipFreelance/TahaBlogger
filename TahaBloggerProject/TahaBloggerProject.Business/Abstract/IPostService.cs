@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using TahaBloggerProject.Entities.DTOS;
 using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.Business.Abstract
@@ -11,11 +12,13 @@ namespace TahaBloggerProject.Business.Abstract
         List<Post> GetPosts();
         IQueryable<Post> GetPost();
 
-        Post Add(Post post);
+        Post Add(PostDto postDto);
 
-        Post GetPostByPublisherUserId(int userid);
+        Post PostGetByPostId(int postId);
 
-        Post Update(Post post);
+        Post GetPostByPostId(int postid);
+
+        Post Update(PostUpdateDto postUpdateDto);
 
 
          
