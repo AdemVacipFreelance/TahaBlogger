@@ -1,0 +1,20 @@
+﻿@using TahaBloggerProject.Entities.Models
+@model List<Category>
+
+
+
+<p class="lead">Kategoriler</p>
+<div class="list-group">
+    <a href="@Url.Action("Index","Home")" class="list-group-item"> <span class="glyphicon glyphicon-arrow-right"></span>Tümü</a>
+    @if (Model != null)
+    {
+        @foreach (var item in Model)
+        {
+            //Category controllerin altında select action unda  category id ye git
+            <a href="/Category/Select/@item.CategoryId" title="@item.Title" class="list-group-item"><span class="glyphicon glyphicon-arrow-right"></span>@item.Title</a>
+        }
+    }
+
+
+
+</div>

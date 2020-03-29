@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.DataAccess.Abstract;
 using TahaBloggerProject.Entities.DTOS;
 using TahaBloggerProject.Entities.Models;
-using System.Globalization;
 
 namespace TahaBloggerProject.Business.Concrete
 {
@@ -15,11 +14,12 @@ namespace TahaBloggerProject.Business.Concrete
 
         public CategoryManager(ICategoryDal categoryDal)
         {
-            _categoryDal = categoryDal ;
+            _categoryDal = categoryDal;
         }
+
         public List<Category> GetAllCategories()
         {
-          return  _categoryDal.GetList(); //ICatDaldan alıyor GetListi.
+            return _categoryDal.GetList(); //ICatDaldan alıyor GetListi.
         }
 
         public Category GetCategoryById(int categoryId)
@@ -37,21 +37,17 @@ namespace TahaBloggerProject.Business.Concrete
                     Title = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(categoryDto.Title)
                 };
                 return _categoryDal.Add(category);
-
             }
             throw new Exception("Girdiğiniz Kategori bilgilerini kontrol ediniz");
         }
+
         public bool IsCategoryCheck(string title)
         {
-            var data = _categoryDal.Get(x=>x.Title ==title);
+            var data = _categoryDal.Get(x => x.Title == title);
 
             if (data != null)
                 return true;
             return false;
-
         }
-     
-
-
     }
 }

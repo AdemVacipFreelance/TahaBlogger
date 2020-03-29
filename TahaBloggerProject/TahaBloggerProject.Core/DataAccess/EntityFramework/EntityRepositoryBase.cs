@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using TahaBloggerProject.Core.Entities;
 
 namespace TahaBloggerProject.Core.DataAccess.EntityFramework
@@ -25,7 +24,7 @@ namespace TahaBloggerProject.Core.DataAccess.EntityFramework
 
         public void Delete(TEntity entity)
         {
-            using (var context=new TContext())
+            using (var context = new TContext())
             {
                 var deletedEntity = context.Entry(entity);
                 deletedEntity.State = EntityState.Deleted;

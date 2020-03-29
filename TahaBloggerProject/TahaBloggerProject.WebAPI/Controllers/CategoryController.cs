@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.Entities.DTOS;
 using TahaBloggerProject.Entities.Models;
@@ -11,12 +8,13 @@ namespace TahaBloggerProject.WebAPI.Controllers
 {
     public class CategoryController : Controller
     {
-
         private readonly ICategoryService _categoryService;
+
         public CategoryController(ICategoryService categoryService)
         {
             _categoryService = categoryService;
         }
+
         ///// <summary>
         ///// Listeleme işlemi
         ///// </summary>
@@ -44,6 +42,4 @@ namespace TahaBloggerProject.WebAPI.Controllers
             _categoryService.Insert(category);
         }
     }
-
 }
-

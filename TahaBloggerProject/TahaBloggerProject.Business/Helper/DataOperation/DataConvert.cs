@@ -1,6 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace TahaBloggerProject.Business.Helper.DataOperation
@@ -24,6 +22,5 @@ namespace TahaBloggerProject.Business.Helper.DataOperation
             var stringData = Encoding.UTF8.GetString(rawBytes);
             return JsonToObject<T>(stringData);
         }
-
     }
 }

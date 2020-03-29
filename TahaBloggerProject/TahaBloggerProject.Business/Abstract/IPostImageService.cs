@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.Business.Abstract
 {
-   public interface IPostImageService
+    public interface IPostImageService
     {
         PostImage Insert(PostImage postImage);
 

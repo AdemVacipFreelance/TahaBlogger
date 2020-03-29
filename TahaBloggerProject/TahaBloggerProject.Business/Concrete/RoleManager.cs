@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.DataAccess.Abstract;
 using TahaBloggerProject.Entities.Models;
@@ -9,12 +7,13 @@ namespace TahaBloggerProject.Business.Concrete
 {
     public class RoleManager : IRoleService
     {
-        IRoleDal _roleDal;
+        private IRoleDal _roleDal;
 
         public RoleManager(IRoleDal roleDal)
         {
             _roleDal = roleDal;
         }
+
         public List<Role> GetAllRoles()
         {
             var data = _roleDal.GetList();

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace TahaBloggerProject.Business.Helper.CommonOperation
 {
-  public  static class ValidationHelper
+    public static class ValidationHelper
     {
         private const string EmailRegex = @"^\w+([-+.']\w+)@\w+([-.]\w+)\.\w+([-.]\w+)*$";
 

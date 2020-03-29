@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TahaBloggerProject.Business.Abstract;
+﻿using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.DataAccess.Abstract;
-using TahaBloggerProject.DataAccess.Conctrete.EntityFramework;
 using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.Business.Concrete
@@ -34,7 +30,7 @@ namespace TahaBloggerProject.Business.Concrete
 
         public Like Insert(Like like)
         {
-          return  _likeDal.Add(like);
+            return _likeDal.Add(like);
         }
     }
 }

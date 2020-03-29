@@ -1,19 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using System;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.Business.Concrete;
 using TahaBloggerProject.Business.Helper.MailOperation;
@@ -30,7 +23,6 @@ namespace TahaBloggerProject.WebAPI
         {
             Configuration = configuration;
         }
-       
 
         public IConfiguration Configuration { get; }
 
@@ -63,7 +55,6 @@ namespace TahaBloggerProject.WebAPI
                         Name = Configuration.GetSection("Swagger:SwaggerDoc:License:Name").Value,
                         Url = new Uri(Configuration.GetSection("Swagger:SwaggerDoc:License:Url").Value),
                     }
-
                 });
                 //Commentleri Swagger için etkinleştirmek.
                 //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -72,8 +63,6 @@ namespace TahaBloggerProject.WebAPI
             });
 
             services.Configure<EmailSettings>(Configuration.GetSection("EmailSettings"));
-
-
 
             services.AddTransient<ICategoryService, CategoryManager>();
             services.AddTransient<ICategoryDal, CategoryDal>();
@@ -101,15 +90,12 @@ namespace TahaBloggerProject.WebAPI
 
             services.AddTransient<IMailOperation, GMailOperation>();
 
-
-
             services.AddDbContext<TahaBlogDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:TahaBlogDb"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -130,12 +116,11 @@ namespace TahaBloggerProject.WebAPI
             });
 
             app.UseAuthorization();
-         
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
         }
     }
 }
