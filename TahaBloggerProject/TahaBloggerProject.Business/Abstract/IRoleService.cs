@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.Business.Abstract
 {
-  public  interface IRoleService
+    public interface IRoleService
     {
         List<Role> GetAllRoles();
+
         Role GetRoleById(int roleId);
 
         Role Insert(Role role);

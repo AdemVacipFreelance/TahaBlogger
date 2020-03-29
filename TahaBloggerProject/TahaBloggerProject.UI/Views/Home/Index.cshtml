@@ -1,0 +1,19 @@
+﻿ @using TahaBloggerProject.Entities.Models
+ @model List<Category>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="text-left col-md-3">
+    @*@Html.Partial("_PartialCategories")*@
+    @*Partialviewde  Null Control yaptığımda  hata gitmişti ancak best practice bu olduğu için bu şekilde yaptım*@
+    @{
+
+
+        await Html.RenderPartialAsync("_PartialCategories");
+    }
+
+</div>

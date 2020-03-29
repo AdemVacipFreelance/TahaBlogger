@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahaBloggerProject.Entities", "TahaBloggerProject.Entities\TahaBloggerProject.Entities.csproj", "{A3A1567F-6A14-4CAC-9501-8F31742C3A29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TahaBloggerProject.Entities", "TahaBloggerProject.Entities\TahaBloggerProject.Entities.csproj", "{A3A1567F-6A14-4CAC-9501-8F31742C3A29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahaBloggerProject.DataAccess", "TahaBloggerProject.DataAccess\TahaBloggerProject.DataAccess.csproj", "{D31EA77D-A6AB-4A00-BE43-128FAB986ADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TahaBloggerProject.DataAccess", "TahaBloggerProject.DataAccess\TahaBloggerProject.DataAccess.csproj", "{D31EA77D-A6AB-4A00-BE43-128FAB986ADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahaBloggerProject.Core", "TahaBloggerProject.Core\TahaBloggerProject.Core.csproj", "{F4B8B439-C59B-43D7-B76E-4ABB1690E53F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TahaBloggerProject.Core", "TahaBloggerProject.Core\TahaBloggerProject.Core.csproj", "{F4B8B439-C59B-43D7-B76E-4ABB1690E53F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahaBloggerProject.Business", "TahaBloggerProject.Business\TahaBloggerProject.Business.csproj", "{3C3E7E27-998B-44E3-A6AC-20719EF89469}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TahaBloggerProject.Business", "TahaBloggerProject.Business\TahaBloggerProject.Business.csproj", "{3C3E7E27-998B-44E3-A6AC-20719EF89469}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahaBloggerProject.WebAPI", "TahaBloggerProject.WebAPI\TahaBloggerProject.WebAPI.csproj", "{8E7E26B0-B96E-4825-8267-75148B777C5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TahaBloggerProject.WebAPI", "TahaBloggerProject.WebAPI\TahaBloggerProject.WebAPI.csproj", "{8E7E26B0-B96E-4825-8267-75148B777C5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahaBloggerProject.UI", "TahaBloggerProject.UI\TahaBloggerProject.UI.csproj", "{A9CA5987-488B-4768-AADD-81883E5B7C71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8E7E26B0-B96E-4825-8267-75148B777C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E7E26B0-B96E-4825-8267-75148B777C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E7E26B0-B96E-4825-8267-75148B777C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9CA5987-488B-4768-AADD-81883E5B7C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9CA5987-488B-4768-AADD-81883E5B7C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9CA5987-488B-4768-AADD-81883E5B7C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9CA5987-488B-4768-AADD-81883E5B7C71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

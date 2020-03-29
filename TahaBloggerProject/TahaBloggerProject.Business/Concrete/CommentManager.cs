@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.DataAccess.Abstract;
 using TahaBloggerProject.Entities.Models;
@@ -15,6 +13,7 @@ namespace TahaBloggerProject.Business.Concrete
         {
             _commentDal = commentDal;
         }
+
         public List<Comment> GetAllComments()
         {
             return _commentDal.GetList();
@@ -27,7 +26,7 @@ namespace TahaBloggerProject.Business.Concrete
 
         public Comment Insert(Comment comment)
         {
-           return _commentDal.Add(comment);
+            return _commentDal.Add(comment);
         }
     }
 }

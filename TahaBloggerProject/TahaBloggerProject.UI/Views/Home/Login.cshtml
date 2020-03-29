@@ -1,0 +1,43 @@
+﻿@using TahaBloggerProject.Entities.DTOS
+@model TahaBloggerProject.Entities.DTOS.LoginDto
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+@using (Html.BeginForm())
+{
+    <div class="container register-form">
+        <div class="form">
+            <div class="note">
+                <p>Kayıt sayfasına hoşgeldiniz.</p>
+            </div>
+
+            <div class="form-content">
+
+                @Html.ValidationSummary(false)
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @*<input type="text" class="form-control" placeholder="Kullanıcı Adınız *" value="" />*@
+                            @Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "Kullanıcı adınız" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", placeholder = "Şifreniz" })
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btnSubmit">Giriş Yap</button>
+                </div>
+            </div>
+        </div>
+     </div>
+}
+
+

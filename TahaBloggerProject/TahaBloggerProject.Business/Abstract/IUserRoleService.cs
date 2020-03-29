@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TahaBloggerProject.Entities.ComplexTypes;
-using TahaBloggerProject.Entities.Models;
+﻿using TahaBloggerProject.Entities.ComplexTypes;
 
 namespace TahaBloggerProject.Business.Abstract
 {
-   public interface IUserRoleService
+    public interface IUserRoleService
     {
         UserRoleInfo GetUserRole(int userId);
     }

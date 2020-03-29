@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.DataAccess.Abstract;
 using TahaBloggerProject.Entities.Models;
@@ -9,11 +7,13 @@ namespace TahaBloggerProject.Business.Concrete
 {
     public class PostImageManager : IPostImageService
     {
-        IPostImageDal _postImageDal;
+        private IPostImageDal _postImageDal;
+
         public PostImageManager(IPostImageDal postImageDal)
         {
             _postImageDal = postImageDal;
         }
+
         public PostImage GetPostImage(int postImageId)
         {
             var data = _postImageDal.Get(x => x.PostImageId == postImageId);
