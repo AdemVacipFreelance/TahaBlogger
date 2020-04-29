@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.Business.Consts;
 using TahaBloggerProject.Business.Helper.CommonOperation;
+using TahaBloggerProject.Core.Entities.Concrete;
 using TahaBloggerProject.DataAccess.Abstract;
+using TahaBloggerProject.Entities.Dtos;
 using TahaBloggerProject.Entities.DTOS;
 using TahaBloggerProject.Entities.Messages;
 using TahaBloggerProject.Entities.Models;
 
 namespace TahaBloggerProject.Business.Concrete
 {
-    public class UserManager : IUserService
+    public class UserManager:IUserService
     {
         private readonly IUserDal _userDal;
 
@@ -38,40 +41,40 @@ namespace TahaBloggerProject.Business.Concrete
 
         public User LoginUser(LoginDto data)
         {
-            var user = _userDal.Get(x => x.UserName == data.Username && x.Password == data.Password);
-            if (user != null)
-            {
-                return user;
-            }
+            //var user = _userDal.Get(x => x.UserName == data.Name && x.Password == data.Password);
+            //if (user != null)
+            //{
+            //    return user;
+            //}
             throw new Exception("Kullanıcı adı veya şifre hatalıdır. Tekrar deneyiniz ");
         }
 
-        public User RegisterUser(RegisterDto registerDto)
-        {
-            // Bu if'ler ayırılacak daha sonra
-            // if bloklarındaki metotlar içinde exception fırlatılacak ve if blokları sadece  metotları cağıracak
-            // IsMailValidateCheck(registerDto.EMail);
-            // IsUserCheck(registerDto.EMail, registerDto.Username);
-            // seklinde
+        //public User RegisterUser(RegisterDto registerDto)
+        //{
+        //    // Bu if'ler ayırılacak daha sonra
+        //    // if bloklarındaki metotlar içinde exception fırlatılacak ve if blokları sadece  metotları cağıracak
+        //    // IsMailValidateCheck(registerDto.EMail);
+        //    // IsUserCheck(registerDto.EMail, registerDto.Username);
+        //    // seklinde
 
-            if (!IsMailValidateCheck(registerDto.EMail) && !IsUserCheck(registerDto.EMail, registerDto.Username))
-            {
-                var user = new User()
-                {
-                    UserName = registerDto.Username,
-                    Password = registerDto.Password,
-                    Email = registerDto.EMail,
-                    ActiveGuid = Guid.NewGuid(),
-                    IsActive = false,
-                    Name = registerDto.Name,
-                    LastName = registerDto.LastName
+        //    if (!IsMailValidateCheck(registerDto.EMail) && !IsUserCheck(registerDto.EMail, registerDto.Username))
+        //    {
+        //        var user = new User()
+        //        {
+        //            UserName = registerDto.Username,
+        //            Password = registerDto.Password,
+        //            Email = registerDto.EMail,
+        //            ActiveGuid = Guid.NewGuid(),
+        //            IsActive = false,
+        //            Name = registerDto.Name,
+        //            LastName = registerDto.LastName
 
-                };
+        //        };
 
-                return _userDal.Add(user);
-            }
-            throw new Exception("Kullanıcı kaydı sırasında bir hata oluştu.");
-        }
+        //        return _userDal.Add(user);
+        //    }
+        //    throw new Exception("Kullanıcı kaydı sırasında bir hata oluştu.");
+        //}
 
         public User UserActivate(Guid activateId)
         {
@@ -97,6 +100,27 @@ namespace TahaBloggerProject.Business.Concrete
         {
             var user = _userDal.Get(x => x.Email == email && x.UserName == userName);
             return user;
+        }
+
+        public User GetByMail(string email)
+        {
+            var data = _userDal.Get((u => u.Email == email));
+            return data;
+        }
+
+        public List<OperationClaim> GetClaims(User user)
+        {
+            return _userDal.GetClaims(user);
+        }
+
+        public void Add(User user)
+        {
+            _userDal.Add(user);
+        }
+
+        public User RegisterUser(RegisterDto data)
+        {
+            throw new NotImplementedException();
         }
     }
 }

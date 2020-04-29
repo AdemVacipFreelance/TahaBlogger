@@ -11,6 +11,7 @@ using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.Business.Concrete;
 using TahaBloggerProject.Business.Helper.MailOperation;
 using TahaBloggerProject.Business.Helper.MailOperation.Gmail;
+using TahaBloggerProject.Core.Utilities.Security.Jwt;
 using TahaBloggerProject.DataAccess.Abstract;
 using TahaBloggerProject.DataAccess.Conctrete.EntityFramework;
 using TahaBloggerProject.Entities.Models;
@@ -78,15 +79,17 @@ namespace TahaBloggerProject.WebAPI
 
             services.AddTransient<IPostImageService, PostImageManager>();
             services.AddTransient<IPostImageDal, PostImageDal>();
+        
+            services.AddTransient<IAuthService, AuthManager>();
+            services.AddTransient<ITokenHelper, JwtHelper>();
 
-            services.AddTransient<IRoleService, RoleManager>();
-            services.AddTransient<IRoleDal, RoleDal>();
-
-            services.AddTransient<IUserService, UserManager>();
             services.AddTransient<IUserDal, UserDal>();
+            services.AddTransient<IUserService, UserManager>();
+           ;
+            services.AddTransient<IAuthService, AuthManager>();
+            services.AddTransient<ITokenHelper, JwtHelper>();
 
-            services.AddTransient<IUserRoleService, UserRoleManager>();
-            services.AddTransient<IUserRoleDal, UserRoleDal>();
+
 
             services.AddTransient<IMailOperation, GMailOperation>();
 

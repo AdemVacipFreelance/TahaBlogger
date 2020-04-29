@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace TahaBloggerProject.Entities.ValueObjectsDTO
+namespace TahaBloggerProject.Entities.Dtos
 {
     public class RegisterDto
     {

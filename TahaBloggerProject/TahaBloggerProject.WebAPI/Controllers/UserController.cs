@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Transactions;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.Business.Helper.MailOperation;
+using TahaBloggerProject.Entities.Dtos;
 using TahaBloggerProject.Entities.DTOS;
 
 namespace TahaBloggerProject.WebAPI.Controllers

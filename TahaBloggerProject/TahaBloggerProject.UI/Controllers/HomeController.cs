@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using TahaBloggerProject.Entities.Dtos;
 using TahaBloggerProject.Entities.DTOS;
 using TahaBloggerProject.Entities.Models;
 using TahaBloggerProject.UI.Models;
