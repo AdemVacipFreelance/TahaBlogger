@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Utilities\**" />
-    <EmbeddedResource Remove="Utilities\**" />
-    <None Remove="Utilities\**" />
+    <Compile Remove="Entities\NewFolder\**" />
+    <EmbeddedResource Remove="Entities\NewFolder\**" />
+    <None Remove="Entities\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>

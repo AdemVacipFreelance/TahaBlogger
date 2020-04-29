@@ -1,6 +1,10 @@
-﻿namespace TahaBloggerProject.Core.Entities
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TahaBloggerProject.Core.Entities
 {
-    public interface IEntity
+   public interface IEntity
     {
     }
 }

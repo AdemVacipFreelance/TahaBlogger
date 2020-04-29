@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using TahaBloggerProject.Business.Abstract;
 using TahaBloggerProject.Entities.DTOS;
@@ -20,7 +21,7 @@ namespace TahaBloggerProject.WebAPI.Controllers
         {
             return _postService.GetPosts();
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpGet("GetPostInfo")]
         public Post PostGetByPostId(int postId)
         {
